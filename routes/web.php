@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\DepartamentosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('/departamentos', function () {
+    //return view('departamentos.index');
+//});
+Route::resource('/departamentos', DepartamentosController::class);
