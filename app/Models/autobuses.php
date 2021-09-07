@@ -9,7 +9,12 @@ class autobuses extends Model
 {
     use HasFactory;
 
-    //relacion uno a muchos 
+    protected $fillable = [
+        'numero_unidad',
+        'numero_placa'
+    ];
+
+    //relacion uno a muchos
     public function viajes(){
         return $this->hasMany('App\Models\viajes');
     }

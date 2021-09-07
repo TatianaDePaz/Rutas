@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\autobusesController;
 use App\Http\Controllers\DepartamentosController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +23,5 @@ Route::get('/', function () {
     //return view('departamentos.index');
 //});
 Route::resource('/departamentos', DepartamentosController::class);
+
+Route::get('/autobuses', [autobusesController::class, 'index']);
